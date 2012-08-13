@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+       
+        <TextView
+            android:id="@+id/tvCifrao"
+            style="@style/TextAppearance.PricePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/cifrao"
+            android:textSize="40sp" />
+        
+         <ImageView
+            android:id="@+id/im_PricePicker"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_alignParentLeft="true"            
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+             />        
+    </LinearLayout>
+
+    <whs.library.NumberPicker
+        android:id="@+id/precoReal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </whs.library.NumberPicker>
+
+    <TextView
+        android:id="@+id/textSeparator"
+        style="@style/TextAppearance.PricePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/separator"
+        android:textSize="80sp" />
+
+    <whs.library.NumberPicker
+        android:id="@+id/precoDezenaCentavo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </whs.library.NumberPicker>
+
+    <whs.library.NumberPicker
+        android:id="@+id/precoCentavo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </whs.library.NumberPicker>
+
+</merge>

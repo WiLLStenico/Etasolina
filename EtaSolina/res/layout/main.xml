@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/im_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="@drawable/iv_title_bar"
+        android:orientation="horizontal"
+        android:scaleType="fitXY" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30sp"
+            android:layout_gravity="center"
+            android:src="@drawable/iv_name" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <!-- Componentes Alcool -->
+
+            <whs.library.PricePicker
+                android:id="@+id/pricePickerEtanol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </whs.library.PricePicker>
+
+            <!-- Componentes Gasolina -->
+
+            <whs.library.PricePicker
+                android:id="@+id/pricePickerGasolina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </whs.library.PricePicker>
+
+            <LinearLayout
+                android:id="@+id/ll_resultado"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:orientation="horizontal"
+                android:scaleType="fitXY" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50sp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_bomba_gasolina" />
+
+                <TextView
+                    android:id="@+id/tv_Result"
+                    style="@style/TextAppearance.Result"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="35sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:layout_gravity="right"
+                android:src="@drawable/logotipo" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
